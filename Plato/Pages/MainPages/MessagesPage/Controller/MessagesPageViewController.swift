@@ -9,20 +9,58 @@ import UIKit
 
 class MessagesPageViewController: UIViewController {
     
+    
     let nib: UINib = CellForMessagesPage.nib
     let identifier: String = CellForMessagesPage.identifier
     let data = ModelForMessagesPage.self
-
+  
+    @IBOutlet weak var searchContactTopViewLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchContactTopView: UIView!
+    @IBOutlet weak var searchContactContainerView: UIView!
+    @IBOutlet weak var containerViewLeadingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(nib, forCellReuseIdentifier: identifier)
+        containerViewLeadingConstraint.constant = view.frame.width
+        searchContactTopViewLeadingConstraint.constant = view.frame.width
+        searchContactTopView.isHidden = true
+        
+        
     }
+    
+    @IBAction func searchButtonPressed(_ sender: UIButton) {
+        print("Search Button Pressed")
+        self.searchContactTopView.isHidden = false
+        self.searchContactContainerView.backgroundColor = .white
+        UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .curveEaseInOut) {
+            self.containerViewLeadingConstraint.constant = 0
+            self.searchContactTopViewLeadingConstraint.constant = 0
+        } completion: { Bool in
+            print("Completed")
+        }
+    }
+    
+    @IBAction func searchContactTopViewBackButtonPressed(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 1.0, delay: 0.1, options: .curveEaseInOut) {
+            self.searchContactTopViewLeadingConstraint.constant = self.view.frame.width
+            self.containerViewLeadingConstraint.constant = self.view.frame.width
+        } completion: { Bool in
+            self.searchContactTopView.isHidden = true
+            
+        }
+
+    }
+    
+    
 }
 
 
+//MARK: - tableView delegate, dataSource
 extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return data.profileImage.count
@@ -133,10 +171,9 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
-    
-    
-    
-    
 }
+
+
+//MARK: - extension for containerView delegate method
+
+

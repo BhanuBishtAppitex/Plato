@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		520131F82924A508000A09CE /* StatusPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520131F72924A508000A09CE /* StatusPageViewController.swift */; };
+		520131FB2924A572000A09CE /* CellForStatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520131F92924A572000A09CE /* CellForStatusPage.swift */; };
+		520131FC2924A572000A09CE /* CellForStatusPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520131FA2924A572000A09CE /* CellForStatusPage.xib */; };
+		520131FF2924A7D3000A09CE /* ModelForStatusPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520131FE2924A7D3000A09CE /* ModelForStatusPage.swift */; };
+		520132062924D887000A09CE /* DashCornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520132052924D887000A09CE /* DashCornerView.swift */; };
+		5201320C2924E1B5000A09CE /* SettingsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201320B2924E1B5000A09CE /* SettingsPageViewController.swift */; };
+		5201320F2924E213000A09CE /* CellForSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201320D2924E213000A09CE /* CellForSettingsPage.swift */; };
+		520132102924E213000A09CE /* CellForSettingsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5201320E2924E213000A09CE /* CellForSettingsPage.xib */; };
+		520132122924E38A000A09CE /* ModelForSettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520132112924E38A000A09CE /* ModelForSettingsPage.swift */; };
+		520132192924E813000A09CE /* CallsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520132182924E813000A09CE /* CallsPageViewController.swift */; };
+		5201321C2924E869000A09CE /* CellForCallsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201321A2924E869000A09CE /* CellForCallsPage.swift */; };
+		5201321D2924E869000A09CE /* CellForCallsPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5201321B2924E869000A09CE /* CellForCallsPage.xib */; };
+		5201321F2924EB64000A09CE /* ModelForCallsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201321E2924EB64000A09CE /* ModelForCallsPage.swift */; };
+		520132232924FA16000A09CE /* SearchContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520132222924FA16000A09CE /* SearchContactViewController.swift */; };
+		5201322A2924FB4A000A09CE /* CellForSearchContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520132282924FB4A000A09CE /* CellForSearchContact.swift */; };
+		5201322B2924FB4A000A09CE /* CellForSearchContact.xib in Resources */ = {isa = PBXBuildFile; fileRef = 520132292924FB4A000A09CE /* CellForSearchContact.xib */; };
+		5201322D2924FCD3000A09CE /* ModelForSearchContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201322C2924FCD3000A09CE /* ModelForSearchContact.swift */; };
 		52486D942923890B0062AA52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486D932923890B0062AA52 /* AppDelegate.swift */; };
 		52486D962923890B0062AA52 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486D952923890B0062AA52 /* SceneDelegate.swift */; };
 		52486D982923890B0062AA52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486D972923890B0062AA52 /* ViewController.swift */; };
@@ -32,6 +49,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		520131F72924A508000A09CE /* StatusPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusPageViewController.swift; sourceTree = "<group>"; };
+		520131F92924A572000A09CE /* CellForStatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForStatusPage.swift; sourceTree = "<group>"; };
+		520131FA2924A572000A09CE /* CellForStatusPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForStatusPage.xib; sourceTree = "<group>"; };
+		520131FE2924A7D3000A09CE /* ModelForStatusPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForStatusPage.swift; sourceTree = "<group>"; };
+		520132052924D887000A09CE /* DashCornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashCornerView.swift; sourceTree = "<group>"; };
+		5201320B2924E1B5000A09CE /* SettingsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPageViewController.swift; sourceTree = "<group>"; };
+		5201320D2924E213000A09CE /* CellForSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForSettingsPage.swift; sourceTree = "<group>"; };
+		5201320E2924E213000A09CE /* CellForSettingsPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForSettingsPage.xib; sourceTree = "<group>"; };
+		520132112924E38A000A09CE /* ModelForSettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForSettingsPage.swift; sourceTree = "<group>"; };
+		520132182924E813000A09CE /* CallsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsPageViewController.swift; sourceTree = "<group>"; };
+		5201321A2924E869000A09CE /* CellForCallsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForCallsPage.swift; sourceTree = "<group>"; };
+		5201321B2924E869000A09CE /* CellForCallsPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForCallsPage.xib; sourceTree = "<group>"; };
+		5201321E2924EB64000A09CE /* ModelForCallsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForCallsPage.swift; sourceTree = "<group>"; };
+		520132222924FA16000A09CE /* SearchContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchContactViewController.swift; sourceTree = "<group>"; };
+		520132282924FB4A000A09CE /* CellForSearchContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForSearchContact.swift; sourceTree = "<group>"; };
+		520132292924FB4A000A09CE /* CellForSearchContact.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForSearchContact.xib; sourceTree = "<group>"; };
+		5201322C2924FCD3000A09CE /* ModelForSearchContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForSearchContact.swift; sourceTree = "<group>"; };
 		52486D902923890B0062AA52 /* Plato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52486D932923890B0062AA52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52486D952923890B0062AA52 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +103,163 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		520131F32924A4DB000A09CE /* StatusPage */ = {
+			isa = PBXGroup;
+			children = (
+				520131F62924A4F6000A09CE /* Model */,
+				520131F52924A4F2000A09CE /* View */,
+				520131F42924A4EE000A09CE /* Controller */,
+			);
+			path = StatusPage;
+			sourceTree = "<group>";
+		};
+		520131F42924A4EE000A09CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				520131F72924A508000A09CE /* StatusPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		520131F52924A4F2000A09CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				520132042924D85F000A09CE /* DashLineView */,
+				520131F92924A572000A09CE /* CellForStatusPage.swift */,
+				520131FA2924A572000A09CE /* CellForStatusPage.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		520131F62924A4F6000A09CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				520131FE2924A7D3000A09CE /* ModelForStatusPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		520132042924D85F000A09CE /* DashLineView */ = {
+			isa = PBXGroup;
+			children = (
+				520132052924D887000A09CE /* DashCornerView.swift */,
+			);
+			path = DashLineView;
+			sourceTree = "<group>";
+		};
+		520132072924E18B000A09CE /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				520132092924E19E000A09CE /* Model */,
+				5201320A2924E1A2000A09CE /* View */,
+				520132082924E198000A09CE /* Controller */,
+			);
+			path = SettingsPage;
+			sourceTree = "<group>";
+		};
+		520132082924E198000A09CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5201320B2924E1B5000A09CE /* SettingsPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		520132092924E19E000A09CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				520132112924E38A000A09CE /* ModelForSettingsPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5201320A2924E1A2000A09CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5201320D2924E213000A09CE /* CellForSettingsPage.swift */,
+				5201320E2924E213000A09CE /* CellForSettingsPage.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		520132132924E7DF000A09CE /* CallsPage */ = {
+			isa = PBXGroup;
+			children = (
+				520132162924E7FB000A09CE /* Model */,
+				520132152924E7F4000A09CE /* View */,
+				520132142924E7EF000A09CE /* Controller */,
+			);
+			path = CallsPage;
+			sourceTree = "<group>";
+		};
+		520132142924E7EF000A09CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				520132182924E813000A09CE /* CallsPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		520132152924E7F4000A09CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5201321A2924E869000A09CE /* CellForCallsPage.swift */,
+				5201321B2924E869000A09CE /* CellForCallsPage.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		520132162924E7FB000A09CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5201321E2924EB64000A09CE /* ModelForCallsPage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		520132202924F9F2000A09CE /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				520132212924F9FD000A09CE /* SearchPage */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		520132212924F9FD000A09CE /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				520132242924FB1A000A09CE /* Model */,
+				520132262924FB25000A09CE /* View */,
+				520132252924FB1F000A09CE /* Controller */,
+			);
+			path = SearchPage;
+			sourceTree = "<group>";
+		};
+		520132242924FB1A000A09CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5201322C2924FCD3000A09CE /* ModelForSearchContact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		520132252924FB1F000A09CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				520132222924FA16000A09CE /* SearchContactViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		520132262924FB25000A09CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				520132282924FB4A000A09CE /* CellForSearchContact.swift */,
+				520132292924FB4A000A09CE /* CellForSearchContact.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		52486D872923890B0062AA52 = {
 			isa = PBXGroup;
 			children = (
@@ -234,7 +425,10 @@
 			isa = PBXGroup;
 			children = (
 				526E3D232923B3660009CC77 /* MainTabBar */,
+				520131F32924A4DB000A09CE /* StatusPage */,
 				526E3D222923B35C0009CC77 /* MessagesPage */,
+				520132132924E7DF000A09CE /* CallsPage */,
+				520132072924E18B000A09CE /* SettingsPage */,
 			);
 			path = MainPages;
 			sourceTree = "<group>";
@@ -245,6 +439,7 @@
 				526E3D262923B37F0009CC77 /* Model */,
 				526E3D252923B37B0009CC77 /* View */,
 				526E3D242923B3740009CC77 /* Controller */,
+				520132202924F9F2000A09CE /* SubViews */,
 			);
 			path = MessagesPage;
 			sourceTree = "<group>";
@@ -343,13 +538,17 @@
 			files = (
 				52486DBF292394280062AA52 /* RegistrationStoryboard.storyboard in Resources */,
 				52486DA02923890C0062AA52 /* LaunchScreen.storyboard in Resources */,
+				520131FC2924A572000A09CE /* CellForStatusPage.xib in Resources */,
 				52486DAC292389780062AA52 /* Poppins-SemiBold.ttf in Resources */,
+				5201322B2924FB4A000A09CE /* CellForSearchContact.xib in Resources */,
 				52486DAE292389780062AA52 /* Poppins-Regular.ttf in Resources */,
 				526E3D1C2923A5740009CC77 /* Assets.xcassets in Resources */,
 				52486D9B2923890B0062AA52 /* Main.storyboard in Resources */,
 				526E3D1F2923ACE80009CC77 /* MainStoryboard.storyboard in Resources */,
+				5201321D2924E869000A09CE /* CellForCallsPage.xib in Resources */,
 				52486DAD292389780062AA52 /* Poppins-Medium.ttf in Resources */,
 				526E3D2A2923B3980009CC77 /* CellForMessagesPage.xib in Resources */,
+				520132102924E213000A09CE /* CellForSettingsPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,18 +560,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				52486D982923890B0062AA52 /* ViewController.swift in Sources */,
+				520131FB2924A572000A09CE /* CellForStatusPage.swift in Sources */,
 				52486D942923890B0062AA52 /* AppDelegate.swift in Sources */,
+				5201322A2924FB4A000A09CE /* CellForSearchContact.swift in Sources */,
+				520132122924E38A000A09CE /* ModelForSettingsPage.swift in Sources */,
 				526E3D212923AEFA0009CC77 /* MainTabBarController.swift in Sources */,
 				526E3D2E2923BB320009CC77 /* MessagesPageViewController.swift in Sources */,
 				52486D962923890B0062AA52 /* SceneDelegate.swift in Sources */,
+				520132232924FA16000A09CE /* SearchContactViewController.swift in Sources */,
 				52486DC4292395E50062AA52 /* CustomView.swift in Sources */,
+				5201321F2924EB64000A09CE /* ModelForCallsPage.swift in Sources */,
 				52486DC6292398460062AA52 /* CustomTextField.swift in Sources */,
 				52486DB729238A220062AA52 /* Constants.swift in Sources */,
+				520132062924D887000A09CE /* DashCornerView.swift in Sources */,
 				52486DC92923A0090062AA52 /* VerifyYourselfViewController.swift in Sources */,
+				5201321C2924E869000A09CE /* CellForCallsPage.swift in Sources */,
+				520131F82924A508000A09CE /* StatusPageViewController.swift in Sources */,
 				52486DC2292394A30062AA52 /* PhoneVerificationViewController.swift in Sources */,
+				520131FF2924A7D3000A09CE /* ModelForStatusPage.swift in Sources */,
+				5201320C2924E1B5000A09CE /* SettingsPageViewController.swift in Sources */,
+				5201322D2924FCD3000A09CE /* ModelForSearchContact.swift in Sources */,
 				526E3D2C2923B8B30009CC77 /* ModelForMessages.swift in Sources */,
 				526E3D292923B3980009CC77 /* CellForMessagesPage.swift in Sources */,
 				52486DBC292391D30062AA52 /* CustomButton.swift in Sources */,
+				5201320F2924E213000A09CE /* CellForSettingsPage.swift in Sources */,
+				520132192924E813000A09CE /* CallsPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
