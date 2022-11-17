@@ -39,6 +39,11 @@
 		52486DC4292395E50062AA52 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486DC3292395E50062AA52 /* CustomView.swift */; };
 		52486DC6292398460062AA52 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486DC5292398460062AA52 /* CustomTextField.swift */; };
 		52486DC92923A0090062AA52 /* VerifyYourselfViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52486DC82923A0090062AA52 /* VerifyYourselfViewController.swift */; };
+		526233DA292602A8002D5C24 /* ChatPageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526233D9292602A8002D5C24 /* ChatPageStoryboard.storyboard */; };
+		526233DD292602E0002D5C24 /* ChatPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526233DC292602E0002D5C24 /* ChatPageViewController.swift */; };
+		526233E129260A65002D5C24 /* CellForChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526233DF29260A65002D5C24 /* CellForChats.swift */; };
+		526233E229260A65002D5C24 /* CellForChats.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526233E029260A65002D5C24 /* CellForChats.xib */; };
+		526233E429260CBB002D5C24 /* ModelForChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526233E329260CBB002D5C24 /* ModelForChats.swift */; };
 		526E3D1C2923A5740009CC77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 526E3D1B2923A5740009CC77 /* Assets.xcassets */; };
 		526E3D1F2923ACE80009CC77 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 526E3D1E2923ACE80009CC77 /* MainStoryboard.storyboard */; };
 		526E3D212923AEFA0009CC77 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E3D202923AEFA0009CC77 /* MainTabBarController.swift */; };
@@ -83,6 +88,11 @@
 		52486DC3292395E50062AA52 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		52486DC5292398460062AA52 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		52486DC82923A0090062AA52 /* VerifyYourselfViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyYourselfViewController.swift; sourceTree = "<group>"; };
+		526233D9292602A8002D5C24 /* ChatPageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChatPageStoryboard.storyboard; sourceTree = "<group>"; };
+		526233DC292602E0002D5C24 /* ChatPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatPageViewController.swift; sourceTree = "<group>"; };
+		526233DF29260A65002D5C24 /* CellForChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellForChats.swift; sourceTree = "<group>"; };
+		526233E029260A65002D5C24 /* CellForChats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForChats.xib; sourceTree = "<group>"; };
+		526233E329260CBB002D5C24 /* ModelForChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForChats.swift; sourceTree = "<group>"; };
 		526E3D1B2923A5740009CC77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Delegate/Assets.xcassets; sourceTree = "<group>"; };
 		526E3D1E2923ACE80009CC77 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		526E3D202923AEFA0009CC77 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -220,6 +230,7 @@
 		520132202924F9F2000A09CE /* SubViews */ = {
 			isa = PBXGroup;
 			children = (
+				526233DB292602BD002D5C24 /* ChatPage */,
 				520132212924F9FD000A09CE /* SearchPage */,
 			);
 			path = SubViews;
@@ -421,6 +432,50 @@
 			path = VerifyPage;
 			sourceTree = "<group>";
 		};
+		526233D62926027E002D5C24 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				526233DC292602E0002D5C24 /* ChatPageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		526233D729260282002D5C24 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				526233DE29260A49002D5C24 /* Cell */,
+				526233D9292602A8002D5C24 /* ChatPageStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		526233D829260286002D5C24 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				526233E329260CBB002D5C24 /* ModelForChats.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		526233DB292602BD002D5C24 /* ChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				526233D829260286002D5C24 /* Model */,
+				526233D729260282002D5C24 /* View */,
+				526233D62926027E002D5C24 /* Controller */,
+			);
+			path = ChatPage;
+			sourceTree = "<group>";
+		};
+		526233DE29260A49002D5C24 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				526233DF29260A65002D5C24 /* CellForChats.swift */,
+				526233E029260A65002D5C24 /* CellForChats.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		526E3D1D2923ACD20009CC77 /* MainPages */ = {
 			isa = PBXGroup;
 			children = (
@@ -544,10 +599,12 @@
 				52486DAE292389780062AA52 /* Poppins-Regular.ttf in Resources */,
 				526E3D1C2923A5740009CC77 /* Assets.xcassets in Resources */,
 				52486D9B2923890B0062AA52 /* Main.storyboard in Resources */,
+				526233E229260A65002D5C24 /* CellForChats.xib in Resources */,
 				526E3D1F2923ACE80009CC77 /* MainStoryboard.storyboard in Resources */,
 				5201321D2924E869000A09CE /* CellForCallsPage.xib in Resources */,
 				52486DAD292389780062AA52 /* Poppins-Medium.ttf in Resources */,
 				526E3D2A2923B3980009CC77 /* CellForMessagesPage.xib in Resources */,
+				526233DA292602A8002D5C24 /* ChatPageStoryboard.storyboard in Resources */,
 				520132102924E213000A09CE /* CellForSettingsPage.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -562,6 +619,7 @@
 				52486D982923890B0062AA52 /* ViewController.swift in Sources */,
 				520131FB2924A572000A09CE /* CellForStatusPage.swift in Sources */,
 				52486D942923890B0062AA52 /* AppDelegate.swift in Sources */,
+				526233E129260A65002D5C24 /* CellForChats.swift in Sources */,
 				5201322A2924FB4A000A09CE /* CellForSearchContact.swift in Sources */,
 				520132122924E38A000A09CE /* ModelForSettingsPage.swift in Sources */,
 				526E3D212923AEFA0009CC77 /* MainTabBarController.swift in Sources */,
@@ -572,6 +630,8 @@
 				5201321F2924EB64000A09CE /* ModelForCallsPage.swift in Sources */,
 				52486DC6292398460062AA52 /* CustomTextField.swift in Sources */,
 				52486DB729238A220062AA52 /* Constants.swift in Sources */,
+				526233DD292602E0002D5C24 /* ChatPageViewController.swift in Sources */,
+				526233E429260CBB002D5C24 /* ModelForChats.swift in Sources */,
 				520132062924D887000A09CE /* DashCornerView.swift in Sources */,
 				52486DC92923A0090062AA52 /* VerifyYourselfViewController.swift in Sources */,
 				5201321C2924E869000A09CE /* CellForCallsPage.swift in Sources */,

@@ -19,5 +19,6 @@ struct C {
         static let accentBlur: String = "AccentBlur"
         static let textPrimary: String = "TextPrimary"
         static let textSecondary: String = "TextSecondary"
+        static let white: String = "White"
     }
 }

@@ -10,84 +10,79 @@ import UIKit
 class MessagesPageViewController: UIViewController {
     
     
-    let nib: UINib = CellForMessagesPage.nib
-    let identifier: String = CellForMessagesPage.identifier
-    let data = ModelForMessagesPage.self
-  
-    @IBOutlet weak var searchContactTopViewLeadingConstraint: NSLayoutConstraint!
+    let nibForMessagesTV: UINib = CellForMessagesPage.nib
+    let identifierForMessagesTV: String = CellForMessagesPage.identifier
+    let dataForMessagesTV = ModelForMessagesPage.self
+    
+    // nid/identifier/data for searchContactTableView
+    let nib: UINib = CellForSearchContact.nib
+    let identifier: String = CellForSearchContact.identifier
+    let data = ModelForSearchContact.self
+    
+    @IBOutlet weak var searchContactStackView: UIStackView!
     @IBOutlet weak var searchContactTopView: UIView!
     @IBOutlet weak var searchContactContainerView: UIView!
-    @IBOutlet weak var containerViewLeadingConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var messagesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        tableView.register(nib, forCellReuseIdentifier: identifier)
-        containerViewLeadingConstraint.constant = view.frame.width
-        searchContactTopViewLeadingConstraint.constant = view.frame.width
-        searchContactTopView.isHidden = true
-        
-        
+        messagesTableView.register(nibForMessagesTV, forCellReuseIdentifier: identifierForMessagesTV)
+        searchContactStackView.isHidden = true
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
-        print("Search Button Pressed")
-        self.searchContactTopView.isHidden = false
+        
         self.searchContactContainerView.backgroundColor = .white
-        UIView.animate(withDuration: 1.0, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .curveEaseInOut) {
-            self.containerViewLeadingConstraint.constant = 0
-            self.searchContactTopViewLeadingConstraint.constant = 0
-        } completion: { Bool in
-            print("Completed")
+        
+        self.searchContactStackView.translatesAutoresizingMaskIntoConstraints = true
+        
+        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.3, options: .curveEaseInOut) {
+            self.searchContactStackView.isHidden = false
         }
     }
     
     @IBAction func searchContactTopViewBackButtonPressed(_ sender: UIButton) {
-        
-        UIView.animate(withDuration: 1.0, delay: 0.1, options: .curveEaseInOut) {
-            self.searchContactTopViewLeadingConstraint.constant = self.view.frame.width
-            self.containerViewLeadingConstraint.constant = self.view.frame.width
-        } completion: { Bool in
-            self.searchContactTopView.isHidden = true
-            
+        UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseInOut) {
+            self.searchContactStackView.isHidden = true
         }
-
     }
-    
-    
 }
 
 
 //MARK: - tableView delegate, dataSource
 extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return data.profileImage.count
+        dataForMessagesTV.profileImage.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! CellForMessagesPage
+        // cell for messagesTableView
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifierForMessagesTV, for: indexPath) as! CellForMessagesPage
         let index = indexPath.section
-        cell.profileImage.image = UIImage(named: data.profileImage[index])
-        cell.nameLabel.text = data.nameText[index]
+        cell.profileImage.image = UIImage(named: dataForMessagesTV.profileImage[index])
+        cell.nameLabel.text = dataForMessagesTV.nameText[index]
+        
+        // cell selection View
+        let view = UIView()
+        view.backgroundColor = UIColor.clear
+        cell.selectedBackgroundView = view
         
         
-        if data.isSeen[index] {
-            switch data.lastMessage[index] {
+        if dataForMessagesTV.isSeen[index] {
+            switch dataForMessagesTV.lastMessage[index] {
             case LastMessage.Text:
-                print("true | text")
                 cell.messageLabel.isHidden = false
                 cell.imageIcon.isHidden = true
                 cell.imageText.isHidden = true
                 cell.videoIcon.isHidden = true
                 cell.videoLabel.isHidden = true
                 cell.messageLabel.textColor = #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
-                cell.messageLabel.text = data.messagesText[index]
+                cell.messageLabel.text = dataForMessagesTV.messagesText[index]
             case LastMessage.Image:
-                print("true | image")
                 cell.messageLabel.isHidden = true
                 cell.imageIcon.isHidden = false
                 cell.imageText.isHidden = false
@@ -96,7 +91,6 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
                 cell.imageIcon.tintColor = #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
                 cell.imageText.textColor = #colorLiteral(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
             case LastMessage.Video:
-                print("true | video")
                 cell.messageLabel.isHidden = true
                 cell.imageIcon.isHidden = true
                 cell.imageText.isHidden = true
@@ -109,11 +103,10 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
             cell.notificationLabel.isHidden = true
             cell.notificationView.isHidden = true
             
-          
+            
         } else {
-            switch data.lastMessage[index] {
+            switch dataForMessagesTV.lastMessage[index] {
             case LastMessage.Text:
-                print("false | text")
                 cell.messageLabel.isHidden = false
                 cell.imageIcon.isHidden = true
                 cell.imageText.isHidden = true
@@ -121,9 +114,8 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
                 cell.videoLabel.isHidden = true
                 cell.videoLabel.textColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
                 cell.messageLabel.textColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
-                cell.messageLabel.text = data.messagesText[index]
+                cell.messageLabel.text = dataForMessagesTV.messagesText[index]
             case LastMessage.Image:
-                print("false | image")
                 cell.messageLabel.isHidden = true
                 cell.imageIcon.isHidden = false
                 cell.imageText.isHidden = false
@@ -132,7 +124,6 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
                 cell.imageIcon.tintColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
                 cell.imageText.textColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
             case LastMessage.Video:
-                print("false | video")
                 cell.messageLabel.isHidden = true
                 cell.imageIcon.isHidden = true
                 cell.imageText.isHidden = true
@@ -141,19 +132,21 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
                 cell.videoIcon.tintColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
                 cell.videoLabel.textColor = #colorLiteral(red: 0.2156862745, green: 0.4470588235, blue: 1, alpha: 1)
             }
-            if data.timeText[index] != "na" {
+            if dataForMessagesTV.timeText[index] != "na" {
                 cell.timeLabel.isHidden = false
-                cell.timeLabel.text = data.timeText[index]
+                cell.timeLabel.text = dataForMessagesTV.timeText[index]
             }
-            if data.notificationText[index] != "na" {
+            if dataForMessagesTV.notificationText[index] != "na" {
                 cell.notificationLabel.isHidden = false
-                cell.notificationLabel.text = data.notificationText[index]
-
+                cell.notificationLabel.text = dataForMessagesTV.notificationText[index]
             }
-           
         }
         return cell
+        
+        
+        
     }
+    
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let contentView = UIView()
         let lineVIew = UIView()
@@ -168,12 +161,19 @@ extension MessagesPageViewController: UITableViewDelegate, UITableViewDataSource
         ])
         return contentView
     }
+    
+    
+    
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 0.3, initialSpringVelocity: 0.5, options: .curveEaseInOut) {
+            tableView.cellForRow(at: indexPath)?.transform = CGAffineTransform(scaleX: 1.025, y: 1.025)
+        } completion: { Bool in
+            tableView.cellForRow(at: indexPath)?.transform  = .identity
+        }
+        let storyboard = UIStoryboard(name: "ChatPageStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ChatPageViewController")
+        present(vc, animated: true)
     }
 }
-
-
-//MARK: - extension for containerView delegate method
-
-
