@@ -51,6 +51,7 @@
 		526E3D2A2923B3980009CC77 /* CellForMessagesPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526E3D282923B3980009CC77 /* CellForMessagesPage.xib */; };
 		526E3D2C2923B8B30009CC77 /* ModelForMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E3D2B2923B8B30009CC77 /* ModelForMessages.swift */; };
 		526E3D2E2923BB320009CC77 /* MessagesPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526E3D2D2923BB320009CC77 /* MessagesPageViewController.swift */; };
+		52A1B1D429278756000A7D8C /* ModelForIntroductoryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A1B1D329278756000A7D8C /* ModelForIntroductoryPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		526E3D282923B3980009CC77 /* CellForMessagesPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellForMessagesPage.xib; sourceTree = "<group>"; };
 		526E3D2B2923B8B30009CC77 /* ModelForMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForMessages.swift; sourceTree = "<group>"; };
 		526E3D2D2923BB320009CC77 /* MessagesPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesPageViewController.swift; sourceTree = "<group>"; };
+		52A1B1D329278756000A7D8C /* ModelForIntroductoryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelForIntroductoryPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +377,7 @@
 		52486DB529238A060062AA52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				52A1B1D329278756000A7D8C /* ModelForIntroductoryPage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 			files = (
 				52486D982923890B0062AA52 /* ViewController.swift in Sources */,
 				520131FB2924A572000A09CE /* CellForStatusPage.swift in Sources */,
+				52A1B1D429278756000A7D8C /* ModelForIntroductoryPage.swift in Sources */,
 				52486D942923890B0062AA52 /* AppDelegate.swift in Sources */,
 				526233E129260A65002D5C24 /* CellForChats.swift in Sources */,
 				5201322A2924FB4A000A09CE /* CellForSearchContact.swift in Sources */,
